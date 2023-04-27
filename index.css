@@ -1,0 +1,206 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Poppins",sans-serif; 
+}
+.myname{
+	font-family: 'Dancing Script', cursive;
+}
+.subheading{
+	font-family: 'Montserrat', sans-serif;
+font-size: 2rem;
+} 
+.background1{
+	background-image: url(./images/bannerBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	background-attachment: Scroll;
+}
+.background2{
+	background-image: url(./images/bannerBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+}
+.background3{
+	background-image: url(./images/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 50vh;
+}
+.container2{
+	min-height: 45vh;
+	margin-top: 3rem;
+}
+.nav-item{
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.container-bg{
+	background-color:rgba(0, 0, 0, 0.5);
+	min-height: 65vh;}
+
+	@media (max-device-width: 600px) {
+  .container-bg {
+    margin-bottom: 3rem;
+  }
+}
+@media (max-device-width: 800px) {
+  .container-bg{
+
+    padding-bottom: 3rem;
+  }
+}
+
+.bg-title{
+	color: white;
+	margin: 0;
+	font-size:5rem;}
+
+.about1{
+	padding-top: 3rem;
+	font-size: 5rem;
+	font-family: 'Montserrat', sans-serif;
+}
+#subtitle{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	  margin-top: 1rem;
+    margin-bottom:1rem;
+}
+
+
+}
+.img1{
+	padding-top: 5rem;
+	display: block;
+	width: auto;
+	height: auto;
+}
+.custom-toggler.navbar-toggler {
+    border-color: black;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 40px;
+}
+h2{
+	color:white;
+
+}
+.titlesec{
+	font-size: 1.5em;
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.titlesec2{
+	color: white;
+		font-size: 1.5em;
+		text-align: right;
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+@media (max-device-width: 600px) {
+  .titlesec2 {
+    text-align: center;
+
+  }
+}
+@media (max-device-width: 800px) {
+  .titlesec2 {
+    text-align: center;
+  }
+}
+
+body,html {
+  height: 100%;
+  background-color: white;
+}
+
+.container {
+  overflow: hidden;
+  .slider {
+    animation: slidein 30s linear infinite;
+    white-space: nowrap;
+    .logos {
+      width: 100%;
+
+      margin: 0px 0;
+      .fab {
+        width: calc(100% / 5);
+        animation: fade-in 0.5s 
+          cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+      }
+
+    }
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.sectiontitle{
+font-family: 'Montserrat', sans-serif;
+font-size: 3rem;
+}
+
+.btn{
+	color: white;
+	font-weight: bold;
+	width: 200px;
+	background-color: #6780cf;
+	font-size: 1rem;
+	border-radius: 25px;
+	padding: 1rem;
+}
+
+.card{
+border: 0px;
+background-color: #ffffff4d;
+}
+.card-title{
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+
+/**/
+.messageme{
+	text-align:left;
+	position: relative;
+}
+.footer1{
+	background-color: #6780cf;
+	padding-bottom: 2rem;
+}
+.socmed{
+	position: sticky;
+	height: 50px;
+	width: 50px;
+	float: right;
+	margin-right: .5rem;
+	margin-bottom: .3rem;
+
+	}
+	.logo1{
+	width: 250px;
+	}
+	form{
+		text-align: left;
+		font-size:1.5rem;
+	}
+	.labelcon{
+		font-family: 'Montserrat', sans-serif;
+	}
