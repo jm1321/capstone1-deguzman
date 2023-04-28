@@ -38,6 +38,7 @@ font-size: 2rem;
 	min-height: 45vh;
 
 }
+
 .nav-item{
 font-family: 'Montserrat', sans-serif;
 
@@ -192,7 +193,11 @@ font-weight: bold;
 }
 .footer1{
 	background-color: #6780cf;
-	padding-bottom: 2rem;
+	padding-bottom: .5rem;
+}
+.signaturebottom{
+	width: 90px;
+	padding-bottom: -50px;
 }
 .socmed{
 	position: sticky;
