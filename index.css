@@ -191,7 +191,6 @@ font-family: 'Montserrat', sans-serif;
 font-weight: bold;
 }
 
-/**/
 .messageme{
 	text-align:left;
 	position: relative;
@@ -202,7 +201,7 @@ font-weight: bold;
 }
 .signaturebottom{
 	width: 90px;
-	padding-bottom: -50px;
+	padding-bottom:-50px;
 }
 .socmed{
 	position: sticky;
