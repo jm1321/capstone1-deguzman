@@ -34,10 +34,9 @@ font-size: 2rem;
 	background-attachment: fixed;
 	min-height: 50vh;
 }
-.container2{
-	min-height: 45vh;
 
-}
+/*for Viewport Height*/
+
 
 .nav-item{
 font-family: 'Montserrat', sans-serif;
@@ -65,17 +64,7 @@ font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	font-size:5rem;}
 
-.about1{
-	padding-top: 3rem;
-	font-size: 5rem;
-	font-family: 'Montserrat', sans-serif;
-}
-#subtitle{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 2rem;
-	  margin-top: 1rem;
-    margin-bottom:1rem;
-}
+
 
 
 }
@@ -105,15 +94,62 @@ h2{
 	margin-top: auto;
 	margin-bottom: auto;
 }
+
+.container2{
+	min-height: 45vh;
+
+}
 .titlesec2{
-	color: white;
-		font-size: 1.5em;
+		color: white;
 		text-align: right;
-	display: inline-block;
-	margin-top: auto;
-	margin-bottom: auto;
+		display: inline-block;
+		margin:-70px;
+}
+.about1{
+	padding-top: 3rem;
+	/*font-size: 5rem;
+	font-family: 'Montserrat', sans-serif;*/
 }
 
+
+#subtitle{
+	font-family: 'Montserrat', sans-serif;
+	  margin-top: 1rem;
+    margin-bottom:1rem;
+}
+
+@media (max-device-width: 600px) {
+  #subtitle {
+    font-size: 1rem;
+
+  }
+}
+@media (max-device-width: 390px) {
+  #subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+#aboutp{
+	font-size:1.5em;
+	font-weight: normal;
+}
+
+@media (max-device-width: 600px) {
+  #aboutp {
+    font-size: 1rem;
+
+  }
+}
+@media (max-device-width: 390px) {
+  #aboutp {
+    font-size: 1.2rem;
+  }
+}
 
 
 @media (max-device-width: 600px) {
@@ -169,20 +205,20 @@ body,html {
   }
 }
 
-.sectiontitle{
+.sectiontitle, .about1{
 font-family: 'Montserrat', sans-serif;
-font-size: 3rem;
+font-size: 4rem;
 /*margin-bottom: 1.5rem;*/
 }
 
 @media (max-device-width: 600px) {
-  .sectiontitle {
+  .sectiontitle, .about1 {
     font-size: 1rem;
 
   }
 }
 @media (max-device-width: 390px) {
-  .sectiontitle {
+  .sectiontitle, .about1{
     font-size: 2rem;
   }
 }
