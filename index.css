@@ -134,7 +134,10 @@ body,html {
 }
 
 #featured1{
-	padding-bottom: -500px;
+	position: relative;
+	margin:-45px;
+	display: inline-block;
+
 }
 
 
@@ -169,8 +172,22 @@ body,html {
 .sectiontitle{
 font-family: 'Montserrat', sans-serif;
 font-size: 3rem;
-margin-bottom: 1.5rem;
+/*margin-bottom: 1.5rem;*/
 }
+
+@media (max-device-width: 600px) {
+  .sectiontitle {
+    font-size: 1rem;
+
+  }
+}
+@media (max-device-width: 390px) {
+  .sectiontitle {
+    font-size: 2rem;
+  }
+}
+
+
 
 .btn{
 	color: white;
