@@ -425,6 +425,17 @@ font-size: 4rem;
 border: 0px;
 background-color: #ffffff4d;
 }
+
+.cardHo{
+	border-bottom: 2px solid #ffda06;
+}
+.cardHo:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+  }
+
+
 .card-title{
 font-family: 'Montserrat', sans-serif;
 font-weight: bold;
@@ -438,10 +449,7 @@ font-weight: bold;
 	background-color: #6780cf;
 	padding-bottom: .5rem;
 }
-.signaturebottom{
-	width: 90px;
-	padding-bottom:-50px;
-}
+
 .socmed{
 	position: sticky;
 	height: 50px;
@@ -461,3 +469,85 @@ font-weight: bold;
 	.labelcon{
 		font-family: 'Montserrat', sans-serif;
 	}
+
+
+
+	.signaturebottom{
+		width: 200px;
+	}
+ /* Footer CSS */
+	 
+	  /* Social Icons */
+	  .social__icon--link {
+		color: #fff;
+		font-size: 24px;
+	  }
+	  
+	  .social__media {
+		background-color: #667fcf;
+		max-width: 100%;
+		width: 100%;
+	  }
+	  
+	  .social__media--wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%;
+		max-width: 1000px;
+		margin: 40px auto 0 auto;
+	  }
+	  
+	  .social__icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 240px;
+	  }
+	  
+	  .social__logo {
+		color: #fff;
+		justify-self: start;
+		margin-left: 20px;
+		cursor: pointer;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	  }
+	  
+	  .website__rights {
+		color: #fff;
+		display: flex;
+		font-family: 'Montserrat', sans-serif;
+	  }
+	  
+	  @media screen and (max-width: 820px) {
+		.footer__links {
+		  padding-top: 2rem;
+		}
+	  
+		#footer__logo {
+		  margin-bottom: 2rem;
+		}
+	  
+		.website__rights {
+		  margin-bottom: 2rem;
+		}
+	  
+		.footer__link--wrapper {
+		  flex-direction: column;
+		}
+	  
+		.social__media--wrap {
+		  flex-direction: column;
+		}
+	  }
+	  
+	  @media screen and (max-width: 480px) {
+		.footer__link--items {
+		  margin: 0;
+		  padding: 10px;
+		  width: 100%;
+		}
+	  }
+
