@@ -43,6 +43,13 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
+.navLogo{
+	
+	cursor: pointer;
+
+
+}
+
 .container-bg{
 	background-color:rgba(0, 0, 0, 0.5);
 	min-height: 65vh;}
