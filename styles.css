@@ -6,7 +6,7 @@
   }
   
   .navbar {
-    background: white;
+    background: #131313;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -482,7 +482,7 @@
   
   /* Footer CSS */
   .footer__container {
-    height: 200px;
+    background-color: #141414;
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
@@ -548,7 +548,6 @@
   .social__media {
     max-width: 1000px;
     width: 100%;
-    height: 500px;
   }
   
   .social__media--wrap {
