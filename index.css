@@ -356,8 +356,10 @@ body,html {
 
 #featured1{
 	position: relative;
-	margin:-45px;
+	margin:-20px;
 	display: inline-block;
+  
+  
 
 }
 
@@ -390,6 +392,7 @@ body,html {
   }
 }
 
+
 .sectiontitle, .about1{
 font-family: 'Montserrat', sans-serif;
 font-size: 4rem;
@@ -397,16 +400,28 @@ font-size: 4rem;
 }
 
 @media (max-device-width: 600px) {
-  .sectiontitle, .about1 {
+   .about1 {
     font-size: 1rem;
 
   }
 }
 @media (max-device-width: 390px) {
-  .sectiontitle, .about1{
-    font-size: 2rem;
+  .about1{
+    font-size: 2.5rem;
   }
 }
+@media (max-device-width: 600px) {
+  .sectiontitle {
+   font-size: 2rem;
+
+ }
+}
+@media (max-device-width: 390px) {
+  .sectiontitle {
+   font-size: 2rem;
+ }
+}
+
 
 
 
