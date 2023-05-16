@@ -401,11 +401,11 @@ font-size: 4rem;
 
 @media (max-device-width: 600px) {
    .about1 {
-    font-size: 1rem;
+    font-size: 2.5rem;
 
   }
 }
-@media (max-device-width: 390px) {
+@media (min-device-width: 600px) {
   .about1{
     font-size: 2.5rem;
   }
