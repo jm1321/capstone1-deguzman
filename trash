@@ -1,0 +1,54 @@
+<div class="d-lg-flex justify-content-center p-md-5 p-lg-5">
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/titanmockup1.png" class="card-img-top" />
+    </div>
+  </div>
+
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/bcard1.png" class="card-img-top" />
+    </div>
+  </div>
+
+  <!-- mr-xl-5 ml-xl-5 -->
+
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/vpromo1.png" class="card-img-top" />
+    </div>
+  </div>
+
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/midwaymock1.png" class="card-img-top" />
+    </div>
+  </div>
+</div>
+<div class="d-lg-flex">
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/activation.png" class="card-img-top" />
+    </div>
+  </div>
+
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/realestate1.png" class="card-img-top" />
+    </div>
+  </div>
+
+  <!-- mr-xl-5 ml-xl-5 -->
+
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/socmed-3.png" class="card-img-top" />
+    </div>
+  </div>
+
+  <div class="card col-xl-4 mb-5 mb-xl-0">
+    <div class="card-body">
+      <img src="./images/walang-pasok.png" class="card-img-top" />
+    </div>
+  </div>
+</div>
