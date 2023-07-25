@@ -599,11 +599,15 @@ form {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
+  }
+  .secondnavigation{
+    font-size: 2rem;
+    color: #000000;
   }
 }
 
@@ -614,10 +618,14 @@ form {
     flex: 100%;
     max-width: 100%;
   }
+  .secondnavigation{
+    font-size: 1rem;
+    color: #000000;
+  }
 }
 
 .secondnavigation{
-  font-size: 2rem;
+
   color: #000000;
 }
 .secondnavigation:focus{
