@@ -558,7 +558,7 @@ form {
   }
 }
 
-/*start css gallery */
+/*start css gallery and second navigations */
 .header {
   text-align: center;
   padding: 32px;
@@ -573,17 +573,17 @@ form {
 }
 
 /* Create four equal columns that sits next to each other */
-.imgGallery {
-  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-  filter: gray; /* IE5+ */
-  -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+/* .imgGallery {
+   filter: url(filters.svg#grayscale); Firefox 3.5+ 
+  filter: gray; /* IE5+ 
+  -webkit-filter: grayscale(1);  Webkit Nightlies & Chrome Canary
   -webkit-transition: all 0.3s ease-in-out;
 }
 .imgGallery:hover {
   filter: none;
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.01);
-}
+} */
 
 .column {
   -ms-flex: 25%; /* IE10 */
@@ -615,4 +615,18 @@ form {
     max-width: 100%;
   }
 }
+
+.secondnavigation{
+  font-size: 2rem;
+  color: #000000;
+}
+.secondnavigation:focus{
+  border-bottom:3px black solid;
+  font-weight: bold;
+}
+.learnmore{
+  margin: 30px 0 0 0;
+}
 /*end css gallery */
+
+
