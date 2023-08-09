@@ -409,6 +409,17 @@ html {
   padding: 1rem;
   box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
+
+.container3{
+  padding-top:25px ;
+}
+
+
+@media screen and (max-width: 767px){
+  .container3{
+    padding:0 !important;
+  }
+}
 /* cards services What i do */
 
 /* Style the counter cards */
@@ -738,14 +749,15 @@ form {
 .container {
   position: relative;
   width: 100%;
-
+  padding: 50px;
 }
 .sectionFeatured{
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
-  margin: 50px 0 0 0;
 
 }
+
+
 
 #featured1 {
   background-image: url(./images/bannerBg.png);
