@@ -6,6 +6,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
+  justify-content: center;
 }
 .myname {
   font-family: "Tangerine", cursive;
@@ -23,7 +24,7 @@ body {
   background-attachment: Scroll;
 }
 .background2 {
-  background-image: url(./images/bannerBg.png);
+  /* background-image: url(./images/bannerBg.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -35,7 +36,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 50vh;
+  min-height: 70vh;
+  
 }
 
 /*For CSS*/
@@ -286,6 +288,7 @@ h2 {
 }
 .about1 {
   padding-top: 3rem;
+  color: #000000;
   /*font-size: 5rem;
 	font-family: 'Montserrat', sans-serif;*/
 }
@@ -294,6 +297,7 @@ h2 {
   font-family: "Montserrat", sans-serif;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: #000000;
 }
 
 @media (max-device-width: 600px) {
@@ -306,10 +310,26 @@ h2 {
     font-size: 1.2rem;
   }
 }
+.aboutsection{
+  padding-left: 120px;
+}
+@media screen and (max-width: 767px){
+  .aboutsection{
+    padding:0 !important;
+  }
+}
+
+
+
+
 
 #aboutp {
+  text-align: justify;
+
+  width: 100%;
   font-size: 1.5em;
   font-weight: normal;
+  color: #000000;
 }
 
 @media (max-device-width: 600px) {
@@ -340,57 +360,12 @@ html {
   background-color: white;
 }
 
-#featured1 {
-  position: relative;
-  margin: -20px;
-  display: inline-block;
-}
-
-.container {
-  overflow: hidden;
-  .slider {
-    animation: slidein 30s linear infinite;
-    white-space: nowrap;
-    .logos {
-      width: 100%;
-
-      margin: 0px 0;
-      .fab {
-        width: calc(100% / 5);
-        animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
-      }
-    }
-  }
-}
-
-@keyframes slidein {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-/* Extra small devices (phones, 600px and down) 
-@media only screen and (max-width: 600px) {...}
-
- Small devices (portrait tablets and large phones, 600px and up) 
-@media only screen and (min-width: 600px) {...}
-
-Medium devices (landscape tablets, 768px and up) 
-@media only screen and (min-width: 768px) {...}
-
- Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {...}
-
- Extra large devices (large laptops and desktops, 1200px and up) 
-@media only screen and (min-width: 1200px) {...} */
-
 .sectiontitle,
 .about1 {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
+
+
   /*margin-bottom: 1.5rem;*/
 }
 
@@ -411,12 +386,16 @@ Medium devices (landscape tablets, 768px and up)
 }
 @media (max-device-width: 600px) {
   .sectiontitle {
-    font-size: 2rem;
+    padding-top: 20px;
+
+    font-size: 4rem;
   }
 }
 @media (max-device-width: 390px) {
   .sectiontitle {
-    font-size: 2rem;
+    
+    padding-top: 20px;
+    font-size: 4rem;
   }
 }
 
@@ -430,25 +409,111 @@ Medium devices (landscape tablets, 768px and up)
   padding: 1rem;
   box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
+/* cards services What i do */
 
-.card {
-  border: 0px;
-  background-color: #ffffff4d;
+/* Style the counter cards */
+.whatimdoingcolumn {
+  width: 25%;
+  padding: 0 10px;
 }
 
-.cardHo {
-  border-bottom: 2px solid #003b73;
-}
-.cardHo:hover {
-  transform: scale(1.075);
-  transition: 0.2s ease-in;
-  cursor: pointer;
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .whatimdoingcolumn {
+    height:60vh;
+    width: 100%;
+    display: block;
+    padding: 20px;
+
+  }
 }
 
-.card-title {
-  font-family: "Montserrat", sans-serif;
+
+.whatimdoingcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10px 10px 10px 10px;
+  height: 50vh;
+}
+.whatimdoingimagecard{
+  border-radius: 10px 10px 0 0 ;
+}
+
+.whatimdoingcontainer{
+  height: 270px;
+}
+.whatimdoingp{
+  padding: 30px 30px  0 30px;
+}
+.whatimdoingtitle{
+  padding: 30px 0 0 0;
+  font-size: 2.5rem;
+  text-align: left;
+  margin: 0 0 0 30px;
+}
+.containerbackground{
+  margin: 0 0 0 50px;
+  position: absolute;
+  z-index: 1;
+  color: #5d5d5d64;
+  font-size: 5rem;
   font-weight: bold;
+  font-family: verdana;
+
 }
+
+
+.whatimdoingbutton {
+  display: inline-block;
+
+  border: none;
+
+  text-align: center;
+  padding: 20px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+
+  border-radius: 25px;
+  background: #476a91;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.whatimdoingbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.whatimdoingbutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.whatimdoingbutton:hover span {
+  padding-right: 25px;
+}
+
+.whatimdoingbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* cards services What i do */
+
+
 
 .messageme {
   text-align: left;
@@ -467,9 +532,10 @@ Medium devices (landscape tablets, 768px and up)
   margin-right: 0.5rem;
   margin-bottom: 0.3rem;
 }
-.logo1 {
-  width: 250px;
-}
+
+
+
+
 form {
   text-align: left;
   font-size: 1.5rem;
@@ -572,13 +638,7 @@ form {
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
-/* .imgGallery {
-   filter: url(filters.svg#grayscale); Firefox 3.5+ 
-  filter: gray; /* IE5+ 
-  -webkit-filter: grayscale(1);  Webkit Nightlies & Chrome Canary
-  -webkit-transition: all 0.3s ease-in-out;
-} */
+
 .imgGallery:hover {
   filter: none;
   -webkit-filter: grayscale(0);
@@ -638,10 +698,6 @@ form {
 
 
 /*end css gallery */
-.container {
-  position: relative;
-  width: 50%;
-}
 
 .image {
   opacity: 1;
@@ -675,3 +731,74 @@ form {
 .weblinks{
   text-decoration: none;
 }
+
+
+
+/*  logo section client*/
+.container {
+  position: relative;
+  width: 100%;
+
+}
+.sectionFeatured{
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  margin: 50px 0 0 0;
+
+}
+
+#featured1 {
+  background-image: url(./images/bannerBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  position: relative;
+  display: inline-block;
+  min-height: 40vh;
+  width: 100%;
+}
+
+
+.fearlogo {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+
+}
+
+/* Create four equal columns that sits next to each other */
+.ferlogo {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.ferlogo img {
+  margin-top: 50px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .ferlogo {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .ferlogo {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    margin
+  }
+}
+/*  logo section client */

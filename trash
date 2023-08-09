@@ -1,54 +1,115 @@
-<div class="d-lg-flex justify-content-center p-md-5 p-lg-5">
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/titanmockup1.png" class="card-img-top" />
-    </div>
-  </div>
+/* cards services What i do */
+/* Float four columns side by side */
+.whatimdoingcolumn {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
 
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/bcard1.png" class="card-img-top" />
-    </div>
-  </div>
+/* Remove extra left and right margins, due to padding */
+.whatimdoingrow {
+  margin: 0 -5px;
 
-  <!-- mr-xl-5 ml-xl-5 -->
+}
 
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/vpromo1.png" class="card-img-top" />
-    </div>
-  </div>
+.containrow{ 
+   justify-content: center;
+}
 
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/midwaymock1.png" class="card-img-top" />
-    </div>
-  </div>
-</div>
-<div class="d-lg-flex">
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/activation.png" class="card-img-top" />
-    </div>
-  </div>
+/* Clear floats after the columns */
+.whatimdoingrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/realestate1.png" class="card-img-top" />
-    </div>
-  </div>
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .whatimdoingcolumn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 
-  <!-- mr-xl-5 ml-xl-5 -->
+/* Style the counter cards */
+.whatimdoingcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 10px 10px 10px 10px;
+}
+.whatimdoingimagecard{
+  border-radius: 10px 10px 0 0 ;
+}
 
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/socmed-3.png" class="card-img-top" />
-    </div>
-  </div>
+.whatimdoingcontainer{
+  height: 270px;
+}
+.whatimdoingp{
+  padding: 30px 30px  0 30px;
+}
+.whatimdoingtitle{
+  padding: 30px 0 0 0;
+  font-size: 2.5rem;
+  text-align: left;
+  margin: 0 0 0 30px;
+}
+.containerbackground{
+  margin: 0 0 0 50px;
+  position: absolute;
+  z-index: 1;
+  color: #5d5d5d64;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: verdana;
 
-  <div class="card col-xl-4 mb-5 mb-xl-0">
-    <div class="card-body">
-      <img src="./images/walang-pasok.png" class="card-img-top" />
-    </div>
-  </div>
-</div>
+}
+
+
+.whatimdoingbutton {
+  display: inline-block;
+
+  border: none;
+
+  text-align: center;
+  padding: 20px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+
+  border-radius: 25px;
+  background: #667fcf;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.whatimdoingbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.whatimdoingbutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.whatimdoingbutton:hover span {
+  padding-right: 25px;
+}
+
+.whatimdoingbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* cards services What i do */
