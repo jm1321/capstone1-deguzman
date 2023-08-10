@@ -553,6 +553,7 @@ form {
 }
 .labelcon {
   font-family: "Montserrat", sans-serif;
+  margin-top: 15px;
 }
 
 .signaturebottom {
@@ -649,6 +650,15 @@ form {
   padding: 0 4px;
 }
 
+.containerwebsite{
+  display: flex;
+}
+.text-col{
+  margin: 5px 0 0 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 
 .imgGallery:hover {
   filter: none;
@@ -667,6 +677,10 @@ form {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+}
+.secondnavigation{
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -755,6 +769,12 @@ form {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
 
+}
+
+@media screen and (max-width: 600px) {
+  .sectionFeatured {
+    font-size: 2.5rem;
+  }
 }
 
 
