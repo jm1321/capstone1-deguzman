@@ -371,12 +371,12 @@ html {
 
 @media (max-device-width: 600px) {
   .about1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 }
 @media (min-device-width: 600px) {
   .about1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 }
 @media (min-device-width: 768px) {
@@ -773,7 +773,10 @@ form {
 
 @media screen and (max-width: 600px) {
   .sectionFeatured {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+  }
+  .sectiontitle{
+    font-size: 2.7rem;
   }
 }
 
