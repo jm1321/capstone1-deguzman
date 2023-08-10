@@ -9,7 +9,7 @@ body {
   justify-content: center;
 }
 .myname {
-  font-family: "Tangerine", cursive;
+  font-family: montserrat;
   font-weight: bold;
 }
 .subheading {
@@ -438,6 +438,11 @@ html {
     padding: 20px;
 
   }
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 
@@ -835,5 +840,79 @@ form {
     max-width: 50%;
     margin
   }
+ 
 }
 /*  logo section client */
+
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconlink{
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.iconlink:hover{
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.social-links {
+	display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 600px) {
+  #title_message {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+
+
+/* 
+.iconfa{
+  height: 20px;
+  width: 20px;
+}
+
+.social-btn {
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #ffffff;
+	border-radius: 10px;
+	margin: 5px;
+	transition: 1s;
+}
+
+.social-btn span {
+	width: 0px;
+	overflow: hidden;
+	transition: 1s;
+	text-align: center;
+}
+
+.social-btn:hover {
+	width: auto;
+}
+
+.social-btn:hover span {
+	padding: 2px;
+	width: max-content;
+}
+
+#facebook svg {
+	fill: #1da1f2;
+}
+
+#linkedin svg {
+	fill: #0e76a8;
+} */
