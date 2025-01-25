@@ -1,0 +1,25 @@
+.elementor-6148 .elementor-element.elementor-element-ca9ee6c{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:0px 0px;--row-gap:0px;--column-gap:0px;}.elementor-6148 .elementor-element.elementor-element-167b567{--display:flex;--min-height:200px;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--margin-top:0px;--margin-bottom:0px;--margin-left:5px;--margin-right:0px;}.elementor-6148 .elementor-element.elementor-element-167b567:not(.elementor-motion-effects-element-type-background), .elementor-6148 .elementor-element.elementor-element-167b567 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("/wp-content/uploads/2024/10/asdsd.png");background-position:center center;background-size:cover;}.elementor-6148 .elementor-element.elementor-element-167b567:hover::before, .elementor-6148 .elementor-element.elementor-element-167b567:hover > .elementor-background-video-container::before, .elementor-6148 .elementor-element.elementor-element-167b567:hover > .e-con-inner > .elementor-background-video-container::before, .elementor-6148 .elementor-element.elementor-element-167b567 > .elementor-background-slideshow:hover::before, .elementor-6148 .elementor-element.elementor-element-167b567 > .e-con-inner > .elementor-background-slideshow:hover::before{background-color:#00337491;--background-overlay:'';}.elementor-6148 .elementor-element.elementor-element-167b567:hover{--overlay-opacity:0.81;}.elementor-6148 .elementor-element.elementor-element-167b567, .elementor-6148 .elementor-element.elementor-element-167b567::before{--overlay-transition:0s;}.elementor-6148 .elementor-element.elementor-element-aeb478a > .elementor-widget-container{margin:15px 0px 0px 0px;}.elementor-6148 .elementor-element.elementor-element-aeb478a .elementor-widget-container{transition:all 400ms;}.elementor-6148 .elementor-element.elementor-element-aeb478a{text-align:center;}.elementor-6148 .elementor-element.elementor-element-aeb478a .elementor-heading-title{font-size:20px;color:#FFFFFF;}.elementor-6148 .elementor-element.elementor-element-d77a76d .elementor-button{background-color:#FFFFFF00;fill:#FFFFFF;color:#FFFFFF;border-style:solid;border-width:1px 1px 1px 1px;border-radius:10px 10px 10px 10px;padding:10px 20px 10px 20px;}.elementor-6148 .elementor-element.elementor-element-d77a76d > .elementor-widget-container{margin:165px 0px 0px 0px;}.elementor-6148 .elementor-element.elementor-element-d77a76d .elementor-widget-container{transition:all 400ms;}@media(max-width:767px){.elementor-6148 .elementor-element.elementor-element-167b567{--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--margin-top:5px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;}}@media(min-width:768px){.elementor-6148 .elementor-element.elementor-element-167b567{--width:100%;}}/* Start custom CSS for container, class: .elementor-element-167b567 */.elementor-6148 .elementor-element.elementor-element-167b567 {
+    --height: 250px;
+    --bottom: 0; /* Set the bottom position to 0 for centering */
+    overflow: hidden !important;
+    position: relative; /* Ensure the container is positioned relative */
+    height: var(--height); /* Set height of the container */
+}
+
+/* Main button styles */
+.elementor-6148 .elementor-element.elementor-element-167b567 .main-button {
+    position: absolute; /* Position the button absolutely within the container */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%) scale(0.8); /* Center the button and start zoomed out */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Make it hidden */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transition for transform and opacity */
+}
+
+/* Hover Zoom In and Show CSS */
+.elementor-6148 .elementor-element.elementor-element-167b567:hover .main-button {
+    opacity: 1; /* Fully visible on hover */
+    visibility: visible; /* Make it visible */
+    transform: translate(-50%, -50%) scale(1); /* Zoom in to normal size while remaining centered */
+}/* End custom CSS */

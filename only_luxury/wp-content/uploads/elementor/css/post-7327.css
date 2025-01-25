@@ -1,0 +1,15 @@
+.elementor-7327 .elementor-element.elementor-element-05476f9{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-7327 .elementor-element.elementor-element-05476f9:not(.elementor-motion-effects-element-type-background), .elementor-7327 .elementor-element.elementor-element-05476f9 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#00000000;}.elementor-7327 .elementor-element.elementor-element-da751cf .elementor-widget-container{transition:all 400ms;}.elementor-7327 .elementor-element.elementor-element-da751cf img{max-width:66%;}#elementor-popup-modal-7327 .dialog-widget-content{background-color:#02010100;margin:0px 20px 20px 0px;}#elementor-popup-modal-7327 .dialog-message{width:100px;height:auto;}#elementor-popup-modal-7327{justify-content:flex-end;align-items:flex-end;}@media(max-width:767px){#elementor-popup-modal-7327 .dialog-widget-content{margin:0px 0px 10px 0px;}}/* Start custom CSS for image, class: .elementor-element-da751cf */.continuous-animation img {
+    animation: easeInOutEffect 5s ease-in-out infinite;
+}
+
+@keyframes easeInOutEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}/* End custom CSS */
