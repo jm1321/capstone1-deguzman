@@ -264,7 +264,7 @@
 														  </div>
 														  </div>
 														</div>
-														<!--start WEBSITES SHOWCASE -->
+														<!--start WEBSITES SHOWCASE --> 
 														  <div class="tab-pane fade show active" id="pills-website" role="tabpanel" aria-labelledby="pills-website-tab">
 													  
 															<div class="row"> 
@@ -332,7 +332,6 @@
 														  </div>
 														  </div>
 														<!--start WEBSITES SHOWCASE END -->
-														  <d
 													
 												 		 <div class="tab-pane fade " id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab"> <div class="row"> 
 														  
@@ -523,30 +522,27 @@
 
 				
  <!-- Slider Sqcript Start -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script>
-		var swiper = new Swiper('.website-slider', {
-			slidesPerView: 1,
-			spaceBetween: 20,
-			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			breakpoints: {
-				768: {
-					slidesPerView: 2,
-				},
-				1024: {
-					slidesPerView: 3,
-				},
-			}
-		});
-	</script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.website-slider', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+    </script>
 <!-- Slider Sqcript Start -->
 	    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 	    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
