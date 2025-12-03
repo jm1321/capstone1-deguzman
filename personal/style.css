@@ -1,0 +1,49 @@
+:root{
+  --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#6ee7b7;
+  --glass:rgba(255,255,255,0.03); --radius:12px; --max:1100px;
+  font-family:Inter, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#071123);color:#e6eef6}
+a{text-decoration:none;color:inherit}
+.container{max-width:var(--max);margin:auto;padding:28px}
+
+header{position:sticky;top:10px;z-index:50}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:var(--glass);backdrop-filter:blur(6px);border-radius:16px}
+.brand{display:flex;gap:12px;align-items:center}
+.brand .dot{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042}
+.brand-title{font-size:14px;font-weight:700}
+.brand-sub{font-size:12px;color:var(--muted)}
+.nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.cta{padding:8px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#042;font-weight:700;border:none;cursor:pointer}
+
+.hero{display:grid;grid-template-columns:1fr 380px;gap:28px}
+.hero-card{background:var(--glass);padding:28px;border-radius:18px}
+.headline{font-size:28px;margin:0 0 8px}
+.sub{color:var(--muted);margin-bottom:18px}
+.actions{display:flex;gap:10px}
+.btn{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;cursor:pointer}
+
+.profile{background:var(--glass);border-radius:18px;padding:18px;text-align:center}
+.avatar{width:200px;height:200px;margin:auto;border-radius:18px;background:#0b1220;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:10px}
+.chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.05);font-size:13px}
+
+.projects{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.proj{background:var(--card);padding:14px;border-radius:12px}
+.proj .img{height:160px;border-radius:8px;background:#12345a;margin-bottom:12px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+.card{background:var(--card);padding:18px;border-radius:12px}
+
+footer{text-align:center;color:var(--muted);margin:40px 0}
+
+/* responsive */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr}
+  .profile{order:2}
+}
+
+@media(max-width:720px){
+  .nav ul{display:none}
+}

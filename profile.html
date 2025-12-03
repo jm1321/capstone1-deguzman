@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Support Portfolio</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.1) 50%, transparent 100%),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(59, 130, 246, 0.03) 2px, rgba(59, 130, 246, 0.03) 4px);
+            animation: techScan 8s linear infinite;
+        }
+        
+        @keyframes techScan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        .status-dot {
+            animation: blink 1.5s ease-in-out infinite;
+        }
+        
+        .tech-grid {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #06b6d4, #3b82f6);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-slate-900"><!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-blue-500/20">
+   <div class="max-w-6xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+     <div class="flex items-center"><img id="logoImage" src="./images/jhnmllr1.png" alt="Logo" class="h-10 w-auto mr-3" onerror="this.style.display='none';">
+      <div id="logoText" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      
+      </div>
+     </div>
+     <div class="flex gap-8"><a href="#services" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium">Services</a> <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium">Projects</a> <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium">Contact</a>
+     </div>
+    </div>
+   </div>
+  </nav><!-- Header / Hero Section -->
+  <header class="gradient-bg text-white w-full tech-grid" style="margin-top: 72px;">
+   <div class="max-w-6xl mx-auto px-6 py-20 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><!-- Left Column - Text Content -->
+     <div class="text-center lg:text-left">
+      <div class="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6"><span class="text-blue-400 text-sm font-mono"><span class="status-dot text-green-400">●</span> SYSTEM ONLINE</span>
+      </div>
+      <h1 id="fullName" class="hero-title text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">John Miller De Guzman</h1>
+      <p id="roleTitle" class="text-2xl font-light mb-6 text-cyan-300">Remote IT Support &amp; Systems Administrator</p>
+      <p id="bioText" class="text-lg leading-relaxed text-gray-300">Experienced IT professional specializing in infrastructure management, hardware/software support, and remote troubleshooting. Committed to delivering reliable, timely support that keeps businesses running smoothly and efficiently.</p>
+     </div><!-- Right Column - Profile Picture -->
+     <div class="flex justify-center lg:justify-end">
+      <div class="relative"><!-- Glowing border effect -->
+       <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-xl opacity-10 animate-pulse"></div><!-- Profile picture container -->
+       <div class="relative w-64 h-64 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden"><img id="profileImage" src="./images/bannercircle1.png" alt="Profile" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"> <!-- Fallback avatar when no image -->
+        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-900">
+         <svg class="w-32 h-32 text-cyan-400/50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+         </svg>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header><!-- Services Section -->
+  <section id="services" class="w-full py-20 bg-slate-900">
+   <div class="max-w-6xl mx-auto px-6">
+    <h2 class="section-title text-4xl font-bold text-white mb-12 text-center">Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Service 1 -->
+     <div class="service-card bg-slate-800/50 border-2 border-blue-500/20 rounded-lg p-8 text-center backdrop-blur-sm">
+      <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border border-blue-500/30">
+       <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-3">Network Administration &amp; Monitoring</h3>
+      <p class="text-gray-400 leading-relaxed">Setup, maintenance, and troubleshooting of network infrastructure to ensure optimal performance and security.</p>
+     </div><!-- Service 2 -->
+     <div class="service-card bg-slate-800/50 border-2 border-blue-500/20 rounded-lg p-8 text-center backdrop-blur-sm">
+      <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border border-blue-500/30">
+       <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-3">Cloud &amp; Server Management</h3>
+      <p class="text-gray-400 leading-relaxed">Professional installations, secure backups, and seamless migrations for cloud and server environments.</p>
+     </div><!-- Service 3 -->
+     <div class="service-card bg-slate-800/50 border-2 border-blue-500/20 rounded-lg p-8 text-center backdrop-blur-sm">
+      <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border border-blue-500/30">
+       <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-3">Remote Support &amp; Helpdesk</h3>
+      <p class="text-gray-400 leading-relaxed">Efficient desktop support, software troubleshooting, and rapid issue resolution for distributed teams.</p>
+     </div><!-- Service 4 -->
+     <div class="service-card bg-slate-800/50 border-2 border-blue-500/20 rounded-lg p-8 text-center backdrop-blur-sm">
+      <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border border-blue-500/30">
+       <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-3">IT Asset Management</h3>
+      <p class="text-gray-400 leading-relaxed">Comprehensive asset tracking, license management, and inventory control for efficient resource allocation.</p>
+     </div><!-- Service 5 -->
+     <div class="service-card bg-slate-800/50 border-2 border-blue-500/20 rounded-lg p-8 text-center backdrop-blur-sm">
+      <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border border-blue-500/30">
+       <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+       </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-white mb-3">Technical Consultation</h3>
+      <p class="text-gray-400 leading-relaxed">Strategic IT process optimization, workflow automation, and system upgrades to enhance productivity.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Projects / Portfolio Section -->
+  <section id="projects" class="w-full py-20 bg-slate-800">
+   <div class="max-w-6xl mx-auto px-6">
+    <h2 class="section-title text-4xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Project 1 -->
+     <div class="project-card bg-slate-900/80 border border-blue-500/20 rounded-lg overflow-hidden shadow-md backdrop-blur-sm">
+      <div class="h-48 bg-gradient-to-br from-blue-600 to-cyan-600 relative overflow-hidden">
+       <div class="absolute inset-0 opacity-20">
+        <svg class="w-full h-full" viewbox="0 0 400 200" fill="white"><circle cx="80" cy="100" r="25" opacity="0.5" /> <circle cx="160" cy="100" r="25" opacity="0.5" /> <circle cx="240" cy="100" r="25" opacity="0.5" /> <circle cx="320" cy="100" r="25" opacity="0.5" /> <line x1="105" y1="100" x2="135" y2="100" stroke="white" stroke-width="3" opacity="0.5" /> <line x1="185" y1="100" x2="215" y2="100" stroke="white" stroke-width="3" opacity="0.5" /> <line x1="265" y1="100" x2="295" y2="100" stroke="white" stroke-width="3" opacity="0.5" />
+        </svg>
+       </div>
+       <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-white text-center">
+         <svg class="w-20 h-20 mx-auto mb-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+         <p class="text-lg font-semibold">Remote Team Setup</p>
+        </div>
+       </div>
+      </div>
+      <div class="p-6">
+       <h3 class="text-2xl font-bold text-white mb-3">Remote Team Infrastructure Setup</h3>
+       <p class="text-gray-400 mb-4"><strong class="text-cyan-400">Challenge:</strong> Startup needed complete IT infrastructure for 25-person distributed team from scratch.</p>
+       <p class="text-gray-400 mb-4"><strong class="text-cyan-400">Solution:</strong> Deployed cloud-based workspace, configured collaboration tools, established helpdesk system, and created IT documentation.</p>
+       <p class="text-gray-300 font-semibold"><strong class="text-cyan-400">Result:</strong> Team operational in 2 weeks, 95% user satisfaction rate, streamlined onboarding process.</p>
+      </div>
+     </div><!-- Project 2 -->
+     <div class="project-card bg-slate-900/80 border border-blue-500/20 rounded-lg overflow-hidden shadow-md backdrop-blur-sm">
+      <div class="h-48 bg-gradient-to-br from-cyan-600 to-blue-600 relative overflow-hidden">
+       <div class="absolute inset-0 opacity-20">
+        <svg class="w-full h-full" viewbox="0 0 400 200" fill="white"><rect x="60" y="120" width="40" height="60" opacity="0.5" /> <rect x="120" y="90" width="40" height="90" opacity="0.5" /> <rect x="180" y="60" width="40" height="120" opacity="0.5" /> <rect x="240" y="80" width="40" height="100" opacity="0.5" /> <rect x="300" y="50" width="40" height="130" opacity="0.5" /> <path d="M80 120 L140 90 L200 60 L260 80 L320 50" stroke="white" stroke-width="3" fill="none" opacity="0.6" />
+        </svg>
+       </div>
+       <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-white text-center">
+         <svg class="w-20 h-20 mx-auto mb-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+         <p class="text-lg font-semibold">Automation</p>
+        </div>
+       </div>
+      </div>
+      <div class="p-6">
+       <h3 class="text-2xl font-bold text-white mb-3">IT Process Automation</h3>
+       <p class="text-gray-400 mb-4"><strong class="text-cyan-400">Challenge:</strong> Manual IT processes consuming excessive time and leading to inconsistent results.</p>
+       <p class="text-gray-400 mb-4"><strong class="text-cyan-400">Solution:</strong> Implemented automation scripts for user provisioning, software deployment, and system monitoring.</p>
+       <p class="text-gray-300 font-semibold"><strong class="text-cyan-400">Result:</strong> 60% reduction in manual tasks, faster response times, improved consistency and accuracy.</p>
+      </div>
+     </div><!-- Project 3 -->
+     <div class="project-card bg-slate-900/80 border border-blue-500/20 rounded-lg overflow-hidden shadow-md backdrop-blur-sm">
+      <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 relative overflow-hidden">
+       <div class="absolute inset-0 opacity-20">
+        <svg class="w-full h-full" viewbox="0 0 400 200" fill="white"><rect x="40" y="50" width="60" height="40" rx="3" opacity="0.5" /> <rect x="40" y="110" width="60" height="40" rx="3" opacity="0.5" /> <rect x="130" y="50" width="60" height="40" rx="3" opacity="0.5" /> <rect x="130" y="110" width="60" height="40" rx="3" opacity="0.5" /> <rect x="220" y="50" width="60" height="40" rx="3" opacity="0.4" /> <rect x="220" y="110" width="60" height="40" rx="3" opacity="0.4" /> <rect x="310" y="50" width="60" height="40" rx="3" opacity="0.3" /> <rect x="310" y="110" width="60" height="40" rx="3" opacity="0.3" />
+        </svg>
+       </div>
+       <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-white text-center">
+         <svg class="w-20 h-20 mx-auto mb-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+         </svg>
+         <p class="text-lg font-semibold">Asset Management</p>
+        </div>
+       </div>
+      </div>
+      <div class="p-6">
+       <h3 class="text-2xl font-bold text-white mb-3">IT Asset Management System</h3>
+       <p class="text-gray-400 mb-4"><strong class="text-cyan-400">Challenge:</strong> Growing company losing track of hardware, software licenses, and IT inventory.</p>
+       <p class="text-gray-400 mb-4"><strong class="text-cyan-400">Solution:</strong> Deployed asset management platform, created tracking workflows, and established renewal alerts for licenses.</p>
+       <p class="text-gray-300 font-semibold"><strong class="text-cyan-400">Result:</strong> 100% asset visibility, eliminated license violations, $15K saved in unnecessary renewals.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Clients Section -->
+  <section class="w-full py-20 bg-slate-900">
+   <div class="max-w-6xl mx-auto px-6">
+    <h2 class="section-title text-4xl font-bold text-white mb-4 text-center">Trusted By</h2>
+    <p class="text-center text-gray-400 mb-12 text-lg">Proud to work with innovative companies across industries</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center"><!-- Client Logo 1 -->
+     <div class="flex items-center justify-center p-6 bg-#000000 rounded-lg hover:bg-gray-50 transition-colors shadow-md"><img id="clientLogo1" src=./images/ttian1.png" alt="Client 1" class="max-w-full max-h-16 w-auto h-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="w-24 h-16 text-gray-400" viewbox="0 0 120 60" fill="currentColor"><rect x="10" y="15" width="30" height="30" rx="4" /> <rect x="45" y="20" width="8" height="20" /> <rect x="58" y="15" width="8" height="30" /> <rect x="71" y="25" width="8" height="20" /> <text x="85" y="35" font-size="20" font-weight="bold" fill="currentColor">
+        TG
+       </text>
+      </svg>
+     </div><!-- Client Logo 2 -->
+     <div class="flex items-center justify-center p-6 bg--#000000 rounded-lg hover:bg-gray-50 transition-colors shadow-md"><img id="clientLogo2" src="./images/skinaura.png" alt="Client 2" class="max-w-full max-h-16 w-auto h-auto object-contain"  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="w-24 h-16 text-gray-400" viewbox="0 0 120 60" fill="currentColor"><circle cx="35" cy="30" r="18" /> <path d="M60 15 L75 30 L60 45 Z" /> <rect x="85" y="20" width="25" height="20" rx="3" />
+      </svg>
+     </div><!-- Client Logo 3 -->
+     <div class="flex items-center justify-center p-6 bg-#000000 rounded-lg hover:bg-gray-50 transition-colors shadow-md"><img id="clientLogo3" src="./images/midway1.png" alt="Client 3" class="max-w-full max-h-16 w-auto h-auto object-contain"  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="w-24 h-16 text-gray-400" viewbox="0 0 120 60" fill="currentColor"><polygon points="25,15 45,15 35,45" /> <rect x="55" y="15" width="20" height="30" rx="10" /> <circle cx="95" cy="30" r="15" />
+      </svg>
+     </div><!-- Client Logo 4 -->
+     <div class="flex items-center justify-center p-6 bg-#000000 rounded-lg hover:bg-gray-50 transition-colors shadow-md"><img id="clientLogo4" src="./images/redbirdlogo.png" alt="Client 4" class="max-w-full max-h-16 w-auto h-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="w-24 h-16 text-gray-400" viewbox="0 0 120 60" fill="currentColor"><rect x="15" y="20" width="25" height="20" rx="2" /> <rect x="45" y="15" width="8" height="30" /> <path d="M60 30 L75 15 L75 45 Z" /> <rect x="85" y="20" width="25" height="20" rx="10" />
+      </svg>
+     </div><!-- Client Logo 5 -->
+     <div class="flex items-center justify-center p-6 bg-#000000 rounded-lg hover:bg-gray-50 transition-colors shadow-md"><img id="clientLogo5" src="" alt="Client 5" class="max-w-full max-h-16 w-auto h-auto object-contain" style="display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="w-24 h-16 text-gray-400" viewbox="0 0 120 60" fill="currentColor"><circle cx="30" cy="30" r="15" /> <circle cx="60" cy="30" r="15" /> <circle cx="90" cy="30" r="15" />
+      </svg>
+     </div><!-- Client Logo 6 -->
+     <div class="flex items-center justify-center p-6 bg-#000000 rounded-lg hover:bg-gray-50 transition-colors shadow-md"><img id="clientLogo6" src="" alt="Client 6" class="max-w-full max-h-16 w-auto h-auto object-contain" style="display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <svg class="w-24 h-16 text-gray-400" viewbox="0 0 120 60" fill="currentColor"><rect x="20" y="15" width="30" height="30" rx="5" /> <path d="M60 15 Q75 30 60 45" /> <rect x="80" y="25" width="30" height="10" rx="5" />
+      </svg>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contact" class="w-full py-20 bg-slate-800">
+   <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="section-title text-4xl font-bold text-white mb-6 inline-block">Let's Work Together</h2>
+    <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">Ready to optimize your IT infrastructure? I'm available for freelance projects and long-term partnerships.</p>
+    <div class="bg-slate-900/80 border border-blue-500/20 rounded-lg shadow-lg p-10 mb-8 backdrop-blur-sm">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="text-center">
+       <svg class="w-12 h-12 mx-auto mb-3 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+       </svg>
+       <p class="text-sm text-gray-500 mb-1">Email</p>
+       <p id="emailAddress" class="font-semibold text-white">jmdg@johnmillerdeguzman.qzz.io</p>
+      </div>
+      <div class="text-center">
+       <svg class="w-12 h-12 mx-auto mb-3 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg>
+       <p class="text-sm text-gray-500 mb-1">Time Zone</p>
+       <p id="timeZone" class="font-semibold text-white">PHT (UTC+8)</p>
+      </div>
+      <div class="text-center">
+       <svg class="w-12 h-12 mx-auto mb-3 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+       </svg>
+       <p class="text-sm text-gray-500 mb-1">Availability</p>
+       <p id="availability" class="font-semibold text-white">Available Mon - Fri, 9AM-6PM</p>
+      </div>
+     </div><a href="#contact" class="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:shadow-xl hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105"> Send Me a Message </a>
+    </div>
+    <p class="text-gray-500">Looking for reliable IT support? Let's discuss how I can help your business thrive.</p>
+   </div>
+  </section>
+  <script>
+        // ========================================
+        // EASY CUSTOMIZATION SECTION
+        // ========================================
+        // Change these values to personalize your portfolio!
+        
+        const defaultConfig = {
+            // 🖼️ YOUR PROFILE IMAGE
+            // Paste your image URL here (must start with https://)
+            // Example: "https://example.com/my-photo.jpg"
+            profile_image_url: "",
+            
+            // 🏢 YOUR LOGO IMAGE (NAVIGATION BAR)
+            // Paste your logo URL here (must start with https://)
+            // Example: "https://example.com/my-logo.png"
+            logo_image_url: "",
+            
+            // 👤 YOUR INFORMATION
+            full_name: "John Miller De",
+            role_title: "Remote IT Support & Systems Administrator",
+            bio_text: "Experienced IT professional specializing in infrastructure management, hardware/software support, and remote troubleshooting. Committed to delivering reliable, timely support that keeps businesses running smoothly and efficiently.",
+            
+            // 📧 YOUR CONTACT DETAILS
+            email_address: "jmdg@johnmillerdeguzman.qzz.io",
+            time_zone: "PHT (UTC+8)",
+            availability: "Available Monday-Friday, 9AM - 10PM",
+            
+            // 🎨 COLOR SCHEME (hex color codes)
+            background_color: "#0f172a",
+            header_gradient_start: "#0f172a",
+            header_gradient_end: "#1e293b",
+            text_color: "#ffffff",
+            accent_color: "#06b6d4",
+            
+            // ✏️ FONT SETTINGS
+            font_family: "system-ui",
+            font_size: 16
+        };
+        
+        // ========================================
+        // END OF EASY CUSTOMIZATION SECTION
+        // ========================================
+
+        async function onConfigChange(config) {
+            const profileImageUrl = config.profile_image_url || defaultConfig.profile_image_url;
+            const logoImageUrl = config.logo_image_url || defaultConfig.logo_image_url;
+            const fullName = config.full_name || defaultConfig.full_name;
+            const roleTitle = config.role_title || defaultConfig.role_title;
+            const bioText = config.bio_text || defaultConfig.bio_text;
+            const emailAddress = config.email_address || defaultConfig.email_address;
+            const timeZone = config.time_zone || defaultConfig.time_zone;
+            const availability = config.availability || defaultConfig.availability;
+            
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const headerGradientStart = config.header_gradient_start || defaultConfig.header_gradient_start;
+            const headerGradientEnd = config.header_gradient_end || defaultConfig.header_gradient_end;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const accentColor = config.accent_color || defaultConfig.accent_color;
+            const fontFamily = config.font_family || defaultConfig.font_family;
+            const fontSize = config.font_size || defaultConfig.font_size;
+
+            const profileImg = document.getElementById('profileImage');
+            if (profileImageUrl) {
+                profileImg.src = profileImageUrl;
+                profileImg.style.display = 'block';
+            } else {
+                profileImg.src = '';
+                profileImg.style.display = 'none';
+            }
+
+            const logoImg = document.getElementById('logoImage');
+            const logoText = document.getElementById('logoText');
+            if (logoImageUrl) {
+                logoImg.src = logoImageUrl;
+                logoImg.style.display = 'block';
+                logoText.style.display = 'none';
+            } else {
+                logoImg.src = '';
+                logoImg.style.display = 'none';
+                logoText.style.display = 'block';
+            }
+
+            document.getElementById('fullName').textContent = fullName;
+            document.getElementById('roleTitle').textContent = roleTitle;
+            document.getElementById('bioText').textContent = bioText;
+            document.getElementById('emailAddress').textContent = emailAddress;
+            document.getElementById('timeZone').textContent = timeZone;
+            document.getElementById('availability').textContent = availability;
+
+            document.body.style.backgroundColor = backgroundColor;
+            document.body.style.color = textColor;
+            document.body.style.fontFamily = `${fontFamily}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
+            
+            const headers = document.querySelectorAll('header.gradient-bg');
+            headers.forEach(header => {
+                header.style.background = `linear-gradient(135deg, ${headerGradientStart} 0%, ${headerGradientEnd} 100%)`;
+            });
+
+            const accentElements = document.querySelectorAll('.bg-gradient-to-r');
+            accentElements.forEach(el => {
+                el.style.background = `linear-gradient(to right, ${accentColor}, ${headerGradientEnd})`;
+            });
+
+            document.documentElement.style.fontSize = `${fontSize}px`;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.header_gradient_start || defaultConfig.header_gradient_start,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.config.header_gradient_start = value;
+                                window.elementSdk.setConfig({ header_gradient_start: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            if (window.elementSdk) {
+                                window.elementSdk.config.accent_color = value;
+                                window.elementSdk.setConfig({ accent_color: value });
+                            }
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: {
+                    get: () => config.font_family || defaultConfig.font_family,
+                    set: (value) => {
+                        if (window.elementSdk) {
+                            window.elementSdk.config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    }
+                },
+                fontSizeable: {
+                    get: () => config.font_size || defaultConfig.font_size,
+                    set: (value) => {
+                        if (window.elementSdk) {
+                            window.elementSdk.config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["profile_image_url", config.profile_image_url || defaultConfig.profile_image_url],
+                ["logo_image_url", config.logo_image_url || defaultConfig.logo_image_url],
+                ["full_name", config.full_name || defaultConfig.full_name],
+                ["role_title", config.role_title || defaultConfig.role_title],
+                ["bio_text", config.bio_text || defaultConfig.bio_text],
+                ["email_address", config.email_address || defaultConfig.email_address],
+                ["time_zone", config.time_zone || defaultConfig.time_zone],
+                ["availability", config.availability || defaultConfig.availability]
+            ]);
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a813790c457509a',t:'MTc2NDc0NTU0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

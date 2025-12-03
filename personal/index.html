@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Portfolio — John Miller De Guzman</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="light">
+  <button id="themeToggle" class="theme-toggle">🌓</button>
+  <header class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="dot">JM</div>
+        <div>
+          <div class="brand-title">John Miller</div>
+          <div class="brand-sub">IT Support & Web Designer</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1 class="headline">IT Support Specialist &amp; Creative Web Designer</h1>
+        <p class="sub">I help businesses build reliable IT systems and design fast, modern websites that convert.</p>
+        <div class="actions">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn" href="#contact">Hire me</a>
+        </div>
+
+        <div id="services" class="services-wrap">
+          <div class="card">
+            <h3>Services</h3>
+            <p>IT support, troubleshooting, WordPress, Webflow, Figma-to-HTML, branding, and more.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile">
+        <div class="avatar">Photo</div>
+        <div class="profile-info">
+          <strong>John Miller De Guzman</strong>
+          <div class="profile-sub">Remote — Philippines</div>
+        </div>
+        <div class="skills">
+          <span class="chip">IT Support</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">WordPress</span>
+          <span class="chip">Figma</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+        <article class="proj">
+          <div class="img"></div>
+          <h4>Project One</h4>
+          <p>Description of the project.</p>
+        </article>
+
+        <article class="proj">
+          <div class="img"></div>
+          <h4>Project Two</h4>
+          <p>Description of the project.</p>
+        </article>
+
+        <article class="proj">
+          <div class="img"></div>
+          <h4>Project Three</h4>
+          <p>Description of the project.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="card" id="about">
+        <h3>About</h3>
+        <p>I combine practical IT support experience with visual design to deliver stable and beautiful systems.</p>
+      </div>
+
+      <div class="card" id="contact">
+        <h3>Contact</h3>
+        <p>Want to work together? Send a message.</p>
+
+        <form onsubmit="handleSubmit(event)">
+          <input id="name" placeholder="Your name" required />
+          <input id="email" type="email" placeholder="Email" required />
+          <textarea id="message" placeholder="Your message" rows="4" required></textarea>
+          <button type="submit" class="cta">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> John Miller De Guzman</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
