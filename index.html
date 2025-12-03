@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John Miller De Guzman - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="./images/welogo.png">
   <script src="/_sdk/element_sdk.js"></script>
   <style>
     body {
@@ -91,6 +92,69 @@
 
     .nav-links a:hover::after {
       width: 100%;
+    }
+
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .burger-menu span {
+      width: 28px;
+      height: 3px;
+      background: #00ffff;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    .burger-menu.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    @media (max-width: 768px) {
+      .burger-menu {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 280px;
+        background: rgba(10, 14, 39, 0.98);
+        flex-direction: column;
+        padding: 100px 40px 40px 40px;
+        gap: 30px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        border-left: 1px solid rgba(0, 255, 255, 0.2);
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 20px;
+        padding: 10px 0;
+      }
+
+      .nav-links a::after {
+        bottom: 0;
+      }
     }
 
     .portfolio-container {
@@ -592,9 +656,11 @@
   <nav class="navbar">
    <div class="portfolio-container">
     <div class="nav-content">
-     <div class="logo"><img src="https://via.placeholder.com/50x50/667eea/ffffff?text=JM" alt="Logo" onerror="this.style.display='none'; this.alt='Logo failed to load';"> <span>John Miller</span>
+     <div class="logo"><img src="./images/jhnmllr1.png" alt="Logo" onerror="this.style.display='none'; this.alt='Logo failed to load';">
      </div>
-     <div class="nav-links"><a href="#hero">Home</a> <a href="#about">About</a> <a href="#services">Services</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a>
+     <div class="burger-menu" id="burger-menu"><span></span> <span></span> <span></span>
+     </div>
+     <div class="nav-links" id="nav-links"><a href="#hero">Home</a> <a href="#about">About</a> <a href="#services">Services</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a>
      </div>
     </div>
    </div>
@@ -605,7 +671,7 @@
     </div>
     <div class="hero-content">
      <h1 id="hero-name">John Miller De Guzman</h1>
-     <h2 id="hero-title">Technical Solutions Specialist</h2>
+     <h2 id="hero-title">Remote IT Support Specialist &amp; Creative Web Designer</h2>
      <p id="hero-subtext">Helping businesses stay efficient with reliable IT systems and clean, modern digital designs.</p><a href="#projects" class="cta-button" id="hero-cta">View My Work</a>
     </div>
    </section><!-- About Section -->
@@ -615,9 +681,8 @@
       <div class="about-image"><img src="./images/jmdg1.png" alt="Portrait" onerror="this.style.display='none'; this.alt='Image failed to load';">
       </div>
       <div class="about-text">
-       <p id="about-text">I'm John Miller De Guzman, a Remote IT Specialist with hands-on expertise in technical support, network management, AI automation, CRM solutions, and web/graphic design. I provide reliable, secure, and efficient IT solutions for real estate, corporate, and small-business clients remotely from the Philippines.
-
-By combining technical problem-solving with creative design, I deliver seamless IT operations while crafting clean, professional digital experiences. My work prioritizes clarity, efficiency, and long-term reliability.</p>
+       <p id="about-text">I'm John Miller De Guzman, a Remote IT Support Specialist and Creative Web/Graphic Designer. I deliver stable, secure, and efficient IT solutions for real estate, corporate, and small-business clients remotely from the Philippines.<br><br>
+        My skillset combines IT operations and digital design, allowing me to solve technical issues while creating clean, professional visual content. I focus on clarity, efficiency, and long-term reliability.</p>
       </div>
      </div>
     </div>
@@ -661,7 +726,7 @@ By combining technical problem-solving with creative design, I deliver seamless 
       <div class="project-image"><img src="./images/techsupport.png" alt="Network Diagram" onerror="this.style.display='none'; this.alt='Image failed to load';">
       </div>
       <div class="project-content">
-       <h3>Remote Troubleshooting</h3>
+       <h3>Remote Team Network Setup</h3>
        <p>Connectivity issues for remote employees → Configured network and VPN → Improved speed and reliability.</p>
       </div>
      </div>
@@ -669,7 +734,7 @@ By combining technical problem-solving with creative design, I deliver seamless 
       <div class="project-image"><img src="./images/midwaymock1.png" alt="Website Screenshot" onerror="this.style.display='none'; this.alt='Image failed to load';">
       </div>
       <div class="project-content">
-       <h3>Website Design</h3>
+       <h3>Real Estate Website Design</h3>
        <p>Client needed modern property listing site → Built responsive website with CMS → Increased user engagement and leads.</p>
       </div>
      </div>
@@ -689,16 +754,34 @@ By combining technical problem-solving with creative design, I deliver seamless 
     <div class="contact-info">
      <div class="contact-item">
       <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-      </svg><span id="contact-email">jmdg@johnmillerdeguzman.qzz.io</span>
+      </svg><span id="contact-email">john@example.com</span>
      </div>
      <div class="contact-item">
       <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-      </svg><span id="contact-location">Philippines</span>
+      </svg><span id="contact-location">Philippines (UAE-time compatible)</span>
      </div>
-    </div><button class="cta-button" id="contact-cta" onclick="window.open('jmdg@johnmillerdeguzman.qzz.io', '_blank')">Send Message</button>
+    </div><button class="cta-button" id="contact-cta" onclick="window.open('mailto:john@example.com', '_blank')">Send Message</button>
    </section>
   </div>
   <script>
+    // Mobile menu toggle
+    const burgerMenu = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+    
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const navLinkItems = navLinks.querySelectorAll('a');
+    navLinkItems.forEach(link => {
+      link.addEventListener('click', () => {
+        burgerMenu.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
     const defaultConfig = {
       hero_name: "John Miller De Guzman",
       hero_title: "Remote IT Support Specialist & Creative Web Designer",
@@ -750,5 +833,5 @@ By combining technical problem-solving with creative design, I deliver seamless 
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8367bb063edd55',t:'MTc2NDc2ODQ4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a838fa955c7de13',t:'MTc2NDc3MDEyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
